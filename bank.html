@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Inside</title>
+
+    <!-- Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind -->
+
+    <link rel="stylesheet" href="tailwind.config.js">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .font-grot {
+            font-family: 'Bricolage Grotesque', sans-serif;
+        }
+    </style>
+</head>
+
+<body
+    class="flex flex-col justify-center gap-20 h-screen bg-gradient-to-l from-violet-300 via-violet-400 to-violet-500 font-grot">
+
+    <!-- header section -->
+
+    <header>
+        <h1 class="text-5xl font-semibold text-center">Let's get some
+            <span class="text-violet-800">Money</span>
+            !<span class="text-violet-800">!</span>!
+        </h1>
+    </header>
+
+    <!-- main section -->
+
+    <main class="mx-60">
+        <section class="grid grid-cols-3 gap-16">
+            <div
+                class="flex flex-col justify-center items-center bg-gradient-to-r from-violet-600 via-violet-400 to-violet-300 rounded-xl py-6 gap-3">
+                <h4 class="text-3xl font-semibold">Deposit</h4>
+                <h2 class="text-4xl font-semibold">$ <span id="deposit-total" class="text-4xl font-semibold text-white">0</span></h2>
+            </div>
+            <div
+                class="flex flex-col justify-center items-center bg-gradient-to-r from-violet-500 via-violet-400 to-violet-300 rounded-xl py-6 gap-3">
+                <h4 class="text-3xl font-semibold">Withdraw</h4>
+                <h2 class="text-4xl font-semibold">$ <span id="withdraw-total" class="text-4xl font-semibold text-white">0</span></h2>
+            </div>
+            <div
+                class="flex flex-col justify-center items-center bg-gradient-to-r from-violet-500 via-violet-400 to-violet-300 rounded-xl py-6 gap-3">
+                <h4 class="text-3xl font-semibold">Balance</h4>
+                <h2 class="text-4xl font-semibold">$ <span id="balance-total" class="text-4xl font-semibold text-white">1000</span></h2>
+            </div>
+        </section>
+        <section class="grid grid-cols-2 gap-16 mt-16">
+            <div
+                class="flex flex-col justify-center bg-gradient-to-r from-violet-600 via-violet-400 to-violet-300 rounded-xl px-10 py-8 gap-6">
+                <h3 class="text-3xl font-semibold">Please Deposit</h3>
+                <div class="flex flex-col gap-4">
+                    <input id="user-deposit" class="bg-violet-50 px-5 py-3 w-[400px] rounded-xl font-medium text-violet-900" type="text"
+                        placeholder="$ amount you want to deposit">
+                    <button id="btn-deposit"
+                        class="bg-violet-50 px-8 py-3 align-bottom w-fit rounded-xl text-violet-700 text-xl font-semibold hover:bg-violet-600 hover:text-white">Deposit</button>
+                </div>
+            </div>
+            <div
+                class="flex flex-col justify-center bg-gradient-to-r from-violet-500 via-violet-400 to-violet-300 rounded-xl px-10 py-8 gap-6">
+                <h3 class="text-3xl font-semibold">Please Withdraw</h3>
+                <div class="flex flex-col gap-4">
+                    <input id="user-withdraw" class="bg-violet-50 px-5 py-3 w-[400px] rounded-xl font-medium text-violet-900" type="text"
+                        placeholder="$ amount you want to withdraw">
+                    <button id="btn-withdraw"
+                        class="bg-violet-50 px-8 py-3 align-bottom w-fit rounded-xl text-violet-700 text-xl font-semibold hover:bg-violet-600 hover:text-white">Withdraw</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/deposit.js"></script>
+    <script src="./js/withdraw.js"></script>
+</body>
+
+</html>
